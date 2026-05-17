@@ -136,6 +136,17 @@ See [`UPGRADE.md`](./UPGRADE.md). Honest framing:
 - It is a **two-way door** — `SPEC.md` is plain markdown; nothing traps
   you in either direction.
 
+## ecosystem
+
+Cavekit is one rock in the caveman family:
+
+| repo | what |
+|---|---|
+| [caveman](https://github.com/JuliusBrussee/caveman) | output compression skill — *why use many token when few do trick* |
+| [cavemem](https://github.com/JuliusBrussee/cavemem) | cross-agent persistent memory — *why agent forget when agent can remember* |
+| **cavekit** *(you here)* | spec-driven build loop — *why agent guess when agent can know* |
+| [cavegemma](https://github.com/JuliusBrussee/finetune-caveman) | Gemma 4 31B fine-tuned on caveman pairs — *why prompt every turn when weight remember* |
+
 ## philosophy
 
 > The spec is the only artifact that earns its tokens. Everything else
