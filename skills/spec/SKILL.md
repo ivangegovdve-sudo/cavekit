@@ -25,19 +25,32 @@ Inspect user request and project state:
 4. `SPEC.md` exists AND args start `amend` → **AMEND**
 5. `SPEC.md` exists, no args → ask user which mode
 
+## INPUTS — spec is the sole mutator
+
+The other verbs produce material; spec writes it. Ingest their handoff blocks
+into the right section, show a diff, write on OK:
+
+- **grill** → sharpened §G + §C
+- **research** → §R rows (add the §R section if absent)
+- **review** → drafted §V lines + the risk verdict
+- **deepen** → §I/§V/§T amendments
+
+⊥ rewrite a section the handoff did not name. Sectioned ownership (see FORMAT.md).
+
 ## NEW — idea → spec
 
-Input: user idea.
+Input: user idea. If it arrived fuzzy, prefer running **grill** first.
 
 Steps:
 1. Extract goal (1 line, caveman). → §G.
 2. List constraints user stated or implied. → §C.
 3. List external surfaces user named. → §I.
-4. Propose initial invariants. → §V (numbered V1…).
-5. Break goal into ordered tasks. → §T pipe table, all status `.`, ids T1…
-6. §B section with header row only (`id|date|cause|fix`).
+4. §R only if **research** ran — else omit the section (right-size).
+5. Propose initial invariants. → §V (numbered V1…).
+6. Break goal into ordered tasks. → §T pipe table, all status `.`, ids T1…
+7. §B section with header row only (`id|date|cause|fix`).
 
-Write to `SPEC.md`. Show user full file. Ask: "spec OK? suggest edits or invoke build."
+Write to `SPEC.md`. Show user full file. Ask: "spec OK? `/review` if high-blast-radius, else `/build`."
 
 ## DISTILL — code → spec
 

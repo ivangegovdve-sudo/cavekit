@@ -13,6 +13,10 @@ description: |
 
 Pure diagnostic. Reports violations. Writes nothing. User decides remedy.
 
+Spec drifting silently from code is the #1 SDD failure mode. check is the
+detector. Run it after each `/build` and before each ship — drift caught here is
+a diff; drift caught in prod is a §B.
+
 ## LOAD
 
 1. Read `SPEC.md`. If missing → "no spec, nothing to check." Stop.

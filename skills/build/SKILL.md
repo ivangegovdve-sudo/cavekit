@@ -18,20 +18,25 @@ Single-thread native plan→execute. You are main Claude. No swarm.
 
 1. Read `SPEC.md`. If missing → tell user to invoke the spec skill first. Stop.
 2. Read `FORMAT.md` once if not loaded.
-3. Parse invocation args:
+3. Read §R if present — external facts the build must honor, ⊥ re-derive or contradict.
+4. Parse invocation args:
    - `§T.n` → that task only
    - `--next` → lowest-numbered row with status `.` or `~`
    - `--all` or empty → every `.` row in §T order
 
+High blast radius (shared module, auth, data, money, public §I)? Run `/review` first. Trivial & reversible? Skip planning ceremony, just do step EXECUTE.
+
 ## PLAN
 
-Native plan mode. For chosen task(s):
+Native plan mode — you delegate to it, you do not reinvent task breakdown. For chosen task(s):
 
 1. Cite every §V invariant that applies. Plan must respect all.
 2. Cite every §I interface touched. Plan must preserve shape.
 3. List files to create / edit.
-4. List tests to add or update (one per invariant touched).
-5. Name verification command (test, build, lint).
+4. **Verification contract** — name the EXACT test(s) / acceptance criteria that
+   prove each §V touched. Which test, not "add tests". "Do TDD" alone backfires;
+   the spec says *what to check*. Each §V touched → a named test that fails first.
+5. Name verification command (test, build, lint) — this is the external oracle. Green = done; ⊥ "looks done".
 
 Show plan. Wait for user OK unless auto mode.
 
@@ -65,8 +70,8 @@ Rule: never silently fix root-cause without considering backprop. §B is the mem
 ## VERIFICATION
 
 Task `x` only if:
-- Verification command exits 0.
-- New test(s) added per plan.
+- Verification command (the oracle) exits 0.
+- Every §V touched has its named test from the verification contract, and it passes.
 - No §V invariant regressed (run full test suite at end).
 
 ## NON-GOALS
