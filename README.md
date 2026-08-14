@@ -1,3 +1,9 @@
+> **Status: frozen (August 2026).** cavekit is no longer in active development.
+> Everything below still installs and works, but expect no new features or
+> fixes. Active development of the family lives in
+> [caveman](https://github.com/JuliusBrussee/caveman) and
+> [caveman-browse](https://github.com/JuliusBrussee/caveman-browse).
+
 <h1 align="center">cavekit</h1>
 
 <p align="center">
@@ -166,12 +172,13 @@ See [`UPGRADE.md`](./UPGRADE.md). Honest framing:
 
 Cavekit is one rock in the caveman family:
 
-| repo | what |
-|---|---|
-| [caveman](https://github.com/JuliusBrussee/caveman) | output compression skill — *why use many token when few do trick* |
-| [cavemem](https://github.com/JuliusBrussee/cavemem) | cross-agent persistent memory — *why agent forget when agent can remember* |
-| **cavekit** *(you here)* | spec-driven build loop — *why agent guess when agent can know* |
-| [cavegemma](https://github.com/JuliusBrussee/finetune-caveman) | Gemma 4 31B fine-tuned on caveman pairs — *why prompt every turn when weight remember* |
+| repo | what | status |
+|---|---|---|
+| [caveman](https://github.com/JuliusBrussee/caveman) | output compression skill + engine — *why use many token when few do trick* | live |
+| [caveman-browse](https://github.com/JuliusBrussee/caveman-browse) | token-efficient browser automation | live |
+| [cavegemma](https://github.com/JuliusBrussee/cavegemma) | Gemma 4 31B fine-tuned on caveman pairs — *why prompt every turn when weight remember* | labs |
+| [cavemem](https://github.com/JuliusBrussee/cavemem) | cross-agent persistent memory — *why agent forget when agent can remember* | frozen |
+| **cavekit** *(you here)* | spec-driven build loop — *why agent guess when agent can know* | frozen |
 
 ## philosophy
 
